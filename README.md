@@ -45,7 +45,7 @@ pipelines.
 | Área | Tecnologías |
 | :--- | :--- |
 | **Backend** | NestJS · TypeScript · Node.js · Python · Java · Spring Boot |
-| **Datos** | PostgreSQL · Modelado dimensional · SCD Type 2 · Row-Level Security · Redis |
+| **Datos** | PostgreSQL · Modelado dimensional · Row-Level Security · Redis |
 | **Infraestructura** | Docker · Proxmox · Git |
 | **Automatización** | n8n · Agentes de código |
 
