@@ -42,10 +42,12 @@ pipelines.
 
 ### Stack
 
-**Backend** · NestJS · TypeScript · Node.js · Python · Java · Spring Boot
-**Datos** · PostgreSQL · Modelado dimensional · Row-Level Security · Redis
-**Infra** · Docker · Proxmox · Git
-**Automatización** · n8n · Agentes de código
+| Área | Tecnologías |
+| :--- | :--- |
+| **Backend** | NestJS · TypeScript · Node.js · Python · Java · Spring Boot |
+| **Datos** | PostgreSQL · Modelado dimensional · SCD Type 2 · Row-Level Security · Redis |
+| **Infraestructura** | Docker · Proxmox · Git |
+| **Automatización** | n8n · Agentes de código |
 
 ---
 
