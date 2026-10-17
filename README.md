@@ -45,11 +45,12 @@ Tailscale para el acceso remoto. Lo opero como si fuera producción:
 
 ### Desarrollo agéntico
 
-Programo con agentes de IA (Claude Code, Codex, OpenCode, Pi, Cursor) sobre un harness propio
-montado sobre [gentle-ai](https://github.com/Gentleman-Programming/gentle-ai) y
-[Engram](https://github.com/Gentleman-Programming/engram): subagentes con modelo y esfuerzo
-elegidos según benchmarks que mido yo, revisión adversarial antes de integrar, y memoria
-persistente autohospedada.
+Programo con agentes de IA (Claude Code, Codex, OpenCode, Pi, Cursor). Armé mis propios
+harnesses (el más completo es [custom-rules](https://github.com/odjaramillo/custom-rules)) y
+terminé adoptando [gentle-ai](https://github.com/Gentleman-Programming/gentle-ai), que adapto
+a mi flujo: modelo y esfuerzo de cada subagente elegidos con un benchmark que escribí,
+revisión adversarial antes de integrar, y memoria persistente con
+[Engram](https://github.com/Gentleman-Programming/engram) autohospedado.
 
 Reporté 6 defectos reproducibles en esas herramientas; 5 ya los cerraron sus mantenedores:
 [engram#778](https://github.com/Gentleman-Programming/engram/issues/778) ·
