@@ -16,12 +16,18 @@ pipelines.
 
 ### En qué estoy trabajando
 
-- **Sistema contable y de tesorería** para un cliente real — cierre de cajas, auditoría de
-  transacciones y control de acceso por roles. NestJS + PostgreSQL + Docker. Entrega final
-  en curso. *(repositorio privado)*
-- **MotoSync v2** — sistema de inventario y catálogo para retail de repuestos, con enfoque
-  offline-first. La v1 no llegó a implementarse; estoy rehaciéndolo sobre un boilerplate
-  propio (SvelteKit + NestJS). *(repositorio privado)*
+- **Sistema de control financiero multi-tenant** para un cliente real — lidero backend e
+  infraestructura en un equipo de 3. Row-Level Security en PostgreSQL, libro contable
+  inmutable de partida doble, cierre de cajas y tasas BCV/paralela. NestJS + React +
+  Docker. v1.0 desplegada, en aceptación con el cliente. *(repositorio privado)*
+- **Punto de venta e inventario para una tienda de repuestos de motos** — catálogo con compatibilidad
+  pieza–moto, búsqueda con embeddings (pgvector) y punto de venta multimoneda (Bs, USD,
+  Zelle) sobre un servidor local en la tienda. NestJS + SvelteKit + PostgreSQL. Unos 650
+  PRs fusionados; instalación en la tienda en curso. *(repositorio privado)*
+- **[Monitor de caídas bancarias](https://github.com/odjaramillo/monitor-caidas-bancarias)**
+  — prototipo que muestra dónde se rompe un pago entre bancos en Venezuela, a partir de
+  reportes de usuarios. SvelteKit + Fastify + PostgreSQL + Redis. Se desarrolla en la
+  asignatura Computación en la Nube, UCAB.
 - **Homelab en Proxmox** — infraestructura autohospedada: virtualización, backups, passthrough
   de GPU y experimentos con agentes de IA locales. Es donde rompo cosas sin costo.
 
