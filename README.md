@@ -45,12 +45,22 @@ Tailscale para el acceso remoto. Lo opero como si fuera producción:
 
 ### Desarrollo agéntico
 
-Programo con agentes de IA (Claude Code, Codex, OpenCode, Pi, Cursor). Armé mis propios
-harnesses (el más completo es [custom-rules](https://github.com/odjaramillo/custom-rules)) y
-terminé adoptando [gentle-ai](https://github.com/Gentleman-Programming/gentle-ai), que adapto
-a mi flujo: modelo y esfuerzo de cada subagente elegidos con un benchmark que escribí,
-revisión adversarial antes de integrar, y memoria persistente con
-[Engram](https://github.com/Gentleman-Programming/engram) autohospedado.
+Programo con agentes de IA (Claude Code, Codex, OpenCode, Pi, Cursor). Probé armar mis
+propios harnesses y terminé adoptando
+[gentle-ai](https://github.com/Gentleman-Programming/gentle-ai), con memoria persistente en
+[Engram](https://github.com/Gentleman-Programming/engram) autohospedado. Encima construí mi
+propia capa, cada pieza a partir de un problema real *(repositorios privados)*:
+
+- **10 skills propias.** Por ejemplo: `socratic-intake` saca a la luz las suposiciones de un
+  requisito antes de escribirlo, `decision-costing` le pone costo a cada opción contra el
+  código antes de elegir, y `qa-standard` audita los gates de calidad de un repo.
+- **12 plugins para Claude Code** que convierten reglas escritas en checks que se cumplen
+  solos: detectar dos sesiones trabajando sobre la misma rama, mostrar qué archivos puede
+  tocar un agente, frenar comandos que rompen una regla. Cada uno con tests.
+- **Un benchmark en Python** que mide costo y cobertura de cada subagente para elegir modelo y
+  esfuerzo con datos, no a ojo.
+- **Subagentes adaptados de gentle-ai** con modelo y esfuerzo fijados, mientras se resuelve
+  [gentle-ai#4928](https://github.com/Gentleman-Programming/gentle-ai/issues/4928), que reporté.
 
 Reporté 6 defectos reproducibles en esas herramientas; 5 ya los cerraron sus mantenedores:
 [engram#778](https://github.com/Gentleman-Programming/engram/issues/778) ·
@@ -69,7 +79,7 @@ Reporté 6 defectos reproducibles en esas herramientas; 5 ya los cerraron sus ma
 | [**gestion-bibliotecaria-sqa**](https://github.com/odjaramillo/gestion-bibliotecaria-sqa) | Ecosistema de calidad automatizado sobre una app Spring Boot + Vue: 7 workflows (análisis estático, JaCoCo, Playwright, métricas) y un [dashboard de KPIs](https://odjaramillo.github.io/gestion-bibliotecaria-sqa/) publicado en Pages. | `GitHub Actions` `Java` `Python` |
 | [**smart-city-sgbd**](https://github.com/odjaramillo/smart-city-sgbd) | Data warehouse para monitoreo de resiliencia eléctrica (SAIDI/SAIFI/CAIDI). Dimensiones SCD Tipo 2 con denominador dinámico, ingesta vía n8n y consumo desde Power BI. | `PostgreSQL` `n8n` `Docker` |
 | [**ecommerce-ai-model**](https://github.com/odjaramillo/ecommerce-ai-model) | Predicción de intención de compra sobre 12.330 sesiones de navegación. Random Forest, búsqueda de hiperparámetros, ajuste de umbral según métricas de negocio y API REST para inferencia. 89,4 % de accuracy. | `Python` `scikit-learn` `FastAPI` |
-| [**custom-rules**](https://github.com/odjaramillo/custom-rules) | Registro centralizado de reglas, roles y skills para agentes de código: 159 skills modulares con metadatos validados por esquema. Licencia CC0. | `TypeScript` `Node.js` |
+| [**custom-rules**](https://github.com/odjaramillo/custom-rules) | Mi primera colección de reglas y skills para agentes de código (enero 2026, los inicios del desarrollo agéntico): 159 skills con metadatos validados por esquema y un CLI que las instala. Licencia CC0. | `TypeScript` `Node.js` |
 | [**soyucab**](https://github.com/odjaramillo/soyucab) | Red social universitaria (proyecto académico). Esquema de 25 tablas con triggers, Row-Level Security y vistas analíticas. | `PostgreSQL` `Express` `React` |
 | [**ucab-tasks**](https://github.com/odjaramillo/ucab-tasks) | API REST de referencia siguiendo Clean Architecture y patrón repositorio. | `TypeScript` |
 
