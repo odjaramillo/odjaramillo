@@ -1,9 +1,9 @@
 ## Oscar Jaramillo
 
-Estudiante de Ingeniería Informática en la UCAB (Caracas), enfocado en **backend y datos**.
-Trabajo principalmente con NestJS, PostgreSQL y Docker, y me interesa la parte de las bases
-de datos que va más allá del CRUD: modelado dimensional, integridad, y automatización de
-pipelines.
+Estudiante de Ingeniería Informática en la UCAB (Caracas) y desarrollador **backend**.
+Construyo software para negocios reales en Venezuela (cajas, inventario, control financiero)
+con NestJS, PostgreSQL y Docker. Me importa que funcione de verdad: QA automatizado, reglas
+convertidas en checks y desarrollo con agentes de IA sobre una infraestructura que opero yo.
 
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
 ![NestJS](https://img.shields.io/badge/NestJS-E0234E?style=flat-square&logo=nestjs&logoColor=white)
@@ -17,9 +17,9 @@ pipelines.
 ### En qué estoy trabajando
 
 - **Sistema de control financiero multi-tenant** para un cliente real — lidero backend e
-  infraestructura en un equipo de 3. Row-Level Security en PostgreSQL, libro contable
-  inmutable de partida doble, cierre de cajas y tasas BCV/paralela. NestJS + React +
-  Docker. v1.0 desplegada, en aceptación con el cliente. *(repositorio privado)*
+  infraestructura y coordino un equipo de 3. Row-Level Security en PostgreSQL, libro
+  contable inmutable de partida doble, cierre de cajas y tasas BCV/paralela. NestJS + React
+  + Docker. v1.0 desplegada en producción. *(repositorio privado)*
 - **Punto de venta e inventario para una tienda de repuestos de motos** — catálogo con compatibilidad
   pieza–moto, búsqueda con embeddings (pgvector) y punto de venta multimoneda (Bs, USD,
   Zelle) sobre un servidor local en la tienda. NestJS + SvelteKit + PostgreSQL. Unos 650
@@ -66,12 +66,12 @@ Reporté 6 defectos reproducibles en esas herramientas; 5 ya los cerraron sus ma
 
 | Proyecto | Qué es | Stack |
 | :--- | :--- | :--- |
+| [**gestion-bibliotecaria-sqa**](https://github.com/odjaramillo/gestion-bibliotecaria-sqa) | Ecosistema de calidad automatizado sobre una app Spring Boot + Vue: 7 workflows (análisis estático, JaCoCo, Playwright, métricas) y un [dashboard de KPIs](https://odjaramillo.github.io/gestion-bibliotecaria-sqa/) publicado en Pages. | `GitHub Actions` `Java` `Python` |
 | [**smart-city-sgbd**](https://github.com/odjaramillo/smart-city-sgbd) | Data warehouse para monitoreo de resiliencia eléctrica (SAIDI/SAIFI/CAIDI). Dimensiones SCD Tipo 2 con denominador dinámico, ingesta vía n8n y consumo desde Power BI. | `PostgreSQL` `n8n` `Docker` |
 | [**ecommerce-ai-model**](https://github.com/odjaramillo/ecommerce-ai-model) | Predicción de intención de compra sobre 12.330 sesiones de navegación. Random Forest, búsqueda de hiperparámetros, ajuste de umbral según métricas de negocio y API REST para inferencia. 89,4 % de accuracy. | `Python` `scikit-learn` `FastAPI` |
 | [**custom-rules**](https://github.com/odjaramillo/custom-rules) | Registro centralizado de reglas, roles y skills para agentes de código: 159 skills modulares con metadatos validados por esquema. Licencia CC0. | `TypeScript` `Node.js` |
 | [**soyucab**](https://github.com/odjaramillo/soyucab) | Red social universitaria (proyecto académico). Esquema de 25 tablas con triggers, Row-Level Security y vistas analíticas. | `PostgreSQL` `Express` `React` |
 | [**ucab-tasks**](https://github.com/odjaramillo/ucab-tasks) | API REST de referencia siguiendo Clean Architecture y patrón repositorio. | `TypeScript` |
-| [**gestion-bibliotecaria-sqa**](https://github.com/odjaramillo/gestion-bibliotecaria-sqa) | Ecosistema de calidad automatizado sobre una app Spring Boot + Vue: 7 workflows (análisis estático, JaCoCo, Playwright, métricas) y un [dashboard de KPIs](https://odjaramillo.github.io/gestion-bibliotecaria-sqa/) publicado en Pages. | `GitHub Actions` `Java` `Python` |
 
 ---
 
