@@ -28,8 +28,36 @@ pipelines.
   — prototipo que muestra dónde se rompe un pago entre bancos en Venezuela, a partir de
   reportes de usuarios. SvelteKit + Fastify + PostgreSQL + Redis. Se desarrolla en la
   asignatura Computación en la Nube, UCAB.
-- **Homelab en Proxmox** — infraestructura autohospedada: virtualización, backups, passthrough
-  de GPU y experimentos con agentes de IA locales. Es donde rompo cosas sin costo.
+
+---
+
+### Infraestructura propia
+
+Mantengo un homelab con Proxmox VE: 6 máquinas virtuales y contenedores, passthrough de dos
+GPUs NVIDIA, servicios publicados con Cloudflare Tunnel detrás de Cloudflare Access, y
+Tailscale para el acceso remoto. Lo opero como si fuera producción:
+
+- **Runners propios de GitHub Actions** para un proyecto de cliente: la suite de tests bajó
+  de 410 s a 55 s (7,4x) y dejó de pagar minutos excedentes de CI.
+- **Backups diarios con simulacro de restauración** documentado, no backups que nadie probó.
+- **Sondas con alertas por Telegram**, cada una escrita después de una falla silenciosa real:
+  una VM que perdió su IP durante semanas, un timer que reportaba éxito sin copiar nada.
+
+### Desarrollo agéntico
+
+Programo con agentes de IA (Claude Code, Codex, OpenCode, Pi, Cursor) sobre un harness propio
+montado sobre [gentle-ai](https://github.com/Gentleman-Programming/gentle-ai) y
+[Engram](https://github.com/Gentleman-Programming/engram): subagentes con modelo y esfuerzo
+elegidos según benchmarks que mido yo, revisión adversarial antes de integrar, y memoria
+persistente autohospedada.
+
+Reporté 6 defectos reproducibles en esas herramientas; 5 ya los cerraron sus mantenedores:
+[engram#778](https://github.com/Gentleman-Programming/engram/issues/778) ·
+[engram#779](https://github.com/Gentleman-Programming/engram/issues/779) ·
+[gentle-ai#2777](https://github.com/Gentleman-Programming/gentle-ai/issues/2777) ·
+[gentle-ai#3042](https://github.com/Gentleman-Programming/gentle-ai/issues/3042) ·
+[gentle-ai#4928](https://github.com/Gentleman-Programming/gentle-ai/issues/4928) ·
+[gentle-ai#4929](https://github.com/Gentleman-Programming/gentle-ai/issues/4929)
 
 ---
 
@@ -42,7 +70,7 @@ pipelines.
 | [**custom-rules**](https://github.com/odjaramillo/custom-rules) | Registro centralizado de reglas, roles y skills para agentes de código: 159 skills modulares con metadatos validados por esquema. Licencia CC0. | `TypeScript` `Node.js` |
 | [**soyucab**](https://github.com/odjaramillo/soyucab) | Red social universitaria (proyecto académico). Esquema de 25 tablas con triggers, Row-Level Security y vistas analíticas. | `PostgreSQL` `Express` `React` |
 | [**ucab-tasks**](https://github.com/odjaramillo/ucab-tasks) | API REST de referencia siguiendo Clean Architecture y patrón repositorio. | `TypeScript` |
-| [**gestion-bibliotecaria-sqa**](https://github.com/odjaramillo/gestion-bibliotecaria-sqa) | Sistema de gestión bibliotecaria trabajado desde la perspectiva de aseguramiento de calidad. | `Python` |
+| [**gestion-bibliotecaria-sqa**](https://github.com/odjaramillo/gestion-bibliotecaria-sqa) | Ecosistema de calidad automatizado sobre una app Spring Boot + Vue: 7 workflows (análisis estático, JaCoCo, Playwright, métricas) y un [dashboard de KPIs](https://odjaramillo.github.io/gestion-bibliotecaria-sqa/) publicado en Pages. | `GitHub Actions` `Java` `Python` |
 
 ---
 
@@ -52,8 +80,8 @@ pipelines.
 | :--- | :--- |
 | **Backend** | NestJS · TypeScript · Node.js · Python · Java · Spring Boot |
 | **Datos** | PostgreSQL · Modelado dimensional · Row-Level Security · Redis |
-| **Infraestructura** | Docker · Proxmox · Git |
-| **Automatización** | n8n · Agentes de código |
+| **Infraestructura** | Docker · Proxmox VE · Cloudflare Tunnel/Access · Tailscale · GitHub Actions · Linux |
+| **Automatización e IA** | n8n · Claude Code · Codex · OpenCode · Engram |
 
 ---
 
