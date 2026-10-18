@@ -1,6 +1,6 @@
 ## Oscar Jaramillo
 
-Estudiante de Ingeniería Informática en la UCAB (Caracas) y desarrollador **backend**.
+Estudiante de Ingeniería Informática en la UCAB (Caracas) y desarrollador **full stack orientado a backend**.
 Construyo software para negocios reales en Venezuela (cajas, inventario, control financiero)
 con NestJS, PostgreSQL y Docker. Me importa que funcione de verdad: QA automatizado, reglas
 convertidas en checks y desarrollo con agentes de IA sobre una infraestructura que opero yo.
