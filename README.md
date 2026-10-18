@@ -22,8 +22,8 @@ convertidas en checks y desarrollo con agentes de IA sobre una infraestructura q
   + Docker. v1.0 desplegada en producción. *(repositorio privado)*
 - **Punto de venta e inventario para una tienda de repuestos de motos** — catálogo con compatibilidad
   pieza–moto, búsqueda con embeddings (pgvector) y punto de venta multimoneda (Bs, USD,
-  Zelle) sobre un servidor local en la tienda. NestJS + SvelteKit + PostgreSQL. Unos 650
-  PRs fusionados; instalación en la tienda en curso. *(repositorio privado)*
+  Zelle) sobre un servidor local en la tienda. NestJS + SvelteKit + PostgreSQL.
+  Instalación en la tienda en curso. *(repositorio privado)*
 - **[Monitor de caídas bancarias](https://github.com/odjaramillo/monitor-caidas-bancarias)**
   — prototipo que muestra dónde se rompe un pago entre bancos en Venezuela, a partir de
   reportes de usuarios. SvelteKit + Fastify + PostgreSQL + Redis. Se desarrolla en la
