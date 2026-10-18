@@ -17,7 +17,7 @@ convertidas en checks y desarrollo con agentes de IA sobre una infraestructura q
 ### En qué estoy trabajando
 
 - **Sistema de control financiero multi-tenant** para un cliente real — llevo el backend y
-  la infraestructura, y coordino el trabajo de un equipo de 3. Row-Level Security en PostgreSQL, libro
+  DevOps, y coordino el trabajo de un equipo de 3. Row-Level Security en PostgreSQL, libro
   contable inmutable de partida doble, cierre de cajas y tasas BCV/paralela. NestJS + React
   + Docker. v1.0 desplegada en producción. *(repositorio privado)*
 - **Punto de venta e inventario para una tienda de repuestos de motos** — catálogo con compatibilidad
