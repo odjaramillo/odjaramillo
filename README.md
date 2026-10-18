@@ -1,4 +1,7 @@
-## Oscar Jaramillo
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.png">
+  <img src="assets/banner-light.png" alt="Oscar Jaramillo · Full stack orientado a backend">
+</picture>
 
 Desarrollador **full stack orientado a backend** y estudiante de Ingeniería Informática en la
 UCAB (Caracas). Construyo software para negocios reales en Venezuela (cajas, inventario,
